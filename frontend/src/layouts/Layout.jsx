@@ -7,8 +7,8 @@ export default function Layout() {
   return (
     <>
       < Navbar />
-      <Grid templateColumns={"repeat(7, 1fr)"} bg="gray.50">
-        <GridItem colSpan={{ base: 0, lg: 2, xl: 1 }} bg="green.200" minH={"100vh"}>
+      <Grid templateColumns={"repeat(6, 1fr)"} bg="gray.50">
+        <GridItem colSpan={{ base: 0, lg: 2, xl: 1 }} bg="brand.600" minH={"100vh"}>
           <Sidebar />
         </GridItem>
         <GridItem colSpan={{ base: 6, lg: 4, xl: 5 }}>

@@ -5,18 +5,18 @@ import { NavLink } from "react-router-dom";
 export default function Sidebar() {
   return (
     <List fontSize={"1.2em"} spacing={4} p={"20px"} mt={"20px"}>
-      <ListItem color={"blue.600"}>
-        <ListIcon as={CalendarIcon} color={"blue.700"} />
+      <ListItem color={"white"}>
+        <ListIcon as={CalendarIcon} color={"white"} />
         <NavLink to="/">Dashboard</NavLink>
       </ListItem>
 
-      <ListItem color={"blue.600"}>
-        <ListIcon as={EditIcon} color={"blue.700"} />
+      <ListItem color={"white"}>
+        <ListIcon as={EditIcon} color={"white"} />
         <NavLink to="/create">New Task</NavLink>
       </ListItem>
 
-      <ListItem color={"blue.600"}>
-        <ListIcon as={AtSignIcon} color={"blue.700"} />
+      <ListItem color={"white"}>
+        <ListIcon as={AtSignIcon} color={"white"} />
         <NavLink to="/profile">Profile</NavLink>
       </ListItem>
     </List>

@@ -45,11 +45,11 @@ func RegisterTask(c *gin.Context) {
 		return
 	}
 
-	defer func() {
-		if err := initializers.Client.Disconnect(context.TODO()); err != nil {
-			log.Fatalln("Failed to disconnect.")
-		}
-	}()
+	// defer func() {
+	// 	if err := initializers.Client.Disconnect(context.TODO()); err != nil {
+	// 		log.Fatalln("Failed to disconnect.")
+	// 	}
+	// }()
 }
 
 func GetAllTasks(c *gin.Context) {
@@ -67,7 +67,16 @@ func GetAllTasks(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to cursor data from the database."})
 		return
 	}
-	c.JSON(http.StatusOK, res)
+
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"response": res,
+	})
+
+	// defer func() {
+	// 	if err := initializers.Client.Disconnect(context.TODO()); err != nil {
+	// 		log.Fatalln("Failed to disconnect.")
+	// 	}
+	// }()
 }
 
 func getCollection() *mongo.Collection {
